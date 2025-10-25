@@ -4,43 +4,81 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    //cout << "Hello World!\n";
 
+int main(){
     int liczba1, liczba2;
     int wybor;
 
-    cout << "Podaj pierwsza liczbe: ";
-    cin >> liczba1;
+    do{
+        cout << "Witaj w Kalkulatorze";
+        cout << "\n";
+        cout << "\n";
+        cout << "Dostepne operacje";
+        cout << "\n";
+        cout << "1 - dodawanie";
+        cout << "\n";
+        cout << "2 - odejmowanie";
+        cout << "\n";
+        cout << "3 - mnozenie";
+        cout << "\n";
+        cout << "4 - dzielenie";
+        cout << "\n";
+        cout << "\n";
+        cout << "9 - Wyjscie";
+        cout << "\n";
+        cout << "\n";
 
-    cout << "Podaj druga liczbe:" << endl;
-    cin >> liczba2;
+        cout << "Wybierz operacje: ";
+        cin >> wybor;
+        cout << "\n";
 
-    //cout << liczba1;
-    //cout << liczba2;
+        cout << "Podaj pierwsza liczbe: ";
+        cin >> liczba1;
+        cout << "\n";
 
-    cout << "\n";
-    cout << "Wybierz operacje:";
-    cout << "\n";
-    cout << "1 - dodawanie";
-    cout << "\n";
-    cout << "2 - odejmowanie";
-    cout << "\n";
-    cout << "3 - mnozenie";
-    cout << "\n";
-    cout << "4 - dzielenie";
-    //cout << "\n"
+        cout << "Podaj druga liczbe: ";
+        cin >> liczba2;
+        cout << "\n";
 
-    cin >> wybor;
-    /*switch (wybor) {
-        def
-    }*/
+        switch (wybor) {
+            default: 
+                cout << "Niedozwolona liczba";
+                break;
+            case 1:
+                //Dodawanie
+                cout << "Twoj wynik to: " << liczba1 + liczba2 << endl;
+                cout << "\n";
+                break;
+            case 2:
+                //odejmowanie
+                cout << "Twoj wynik to: " << liczba1 - liczba2 << endl;
+                cout << "\n";
+                break;
+            case 3:
+                //Mnożenie
+                cout << "Twoj wynik to: " << liczba1 * liczba2 << endl;
+                cout << "\n";
+                break;
+            case 4:
+                //Dzielenie
+                if (liczba2 == 0) {
+                    cout << "Nie dziel przez zero!" << endl;
+                }
+                else {
+                    cout << "Twoj wynik to: " << liczba1 / liczba2 << endl;
+                    cout << "\n";
+                }
+                break;
+            case 9:
+                //Dzielenie
+                cout << "Do zobaczenia!";
+                cout << "\n";
+                break;
+        }
+
+    } while(wybor != 9);
 }
 
-//int dodwanie() {
-//
-//}
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
 // Debugowanie programu: F5 lub menu Debugowanie > Rozpocznij debugowanie
